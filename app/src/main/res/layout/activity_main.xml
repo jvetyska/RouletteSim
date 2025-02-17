@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:padding="10dp">
+
+    <!-- Balance Display -->
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="16dp"
+        android:text="Balance: 500"
+        android:textSize="18sp" />
+
+    <!-- Scrollable Results Table -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/buttonsLayout"
+        android:layout_below="@id/balance">
+
+        <TableLayout
+            android:id="@+id/resultsTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="*"
+            android:stretchColumns="*"></TableLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Buttons Layout -->
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#EEEEEE"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- EVEN BETS -->
+        <Button
+            android:id="@+id/betEven20"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="#B4B4B4"
+            android:text="$20"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/betEven40"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="#B4B4B4"
+            android:drawablePadding="10dp"
+            android:text="$40"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/betEven60"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="#B4B4B4"
+            android:text="$60"
+            android:textColor="#FFFFFF" />
+
+        <!-- ODD BETS -->
+        <Button
+            android:id="@+id/betOdd20"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="#F44336"
+            android:text="$20"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/betOdd40"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="#F44336"
+            android:text="$40"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/betOdd60"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="#F44336"
+            android:text="$60"
+            android:textColor="#FFFFFF" />
+
+        <!-- SKIP AND RESTART -->
+        <Button
+            android:id="@+id/skipButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="#2196F3"
+            android:text="Skip"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/restartButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="#FF9800"
+            android:text="OVER"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</RelativeLayout>
